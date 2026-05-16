@@ -41,7 +41,7 @@ body {
     color: var(--color-black);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: crosshair;
+    cursor: pointer;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -170,10 +170,12 @@ img {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     line-height: 0.9;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-title .line {
@@ -428,9 +430,11 @@ img {
 
 .philosophy-statement h2 {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     line-height: 0.9;
     text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .philosophy-text {
@@ -518,8 +522,10 @@ img {
 
 .case-placeholder h3 {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     color: var(--color-accent-lime);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .case-content {
@@ -647,10 +653,12 @@ img {
 
 .cta-title {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     line-height: 0.95;
     text-transform: uppercase;
     margin-bottom: var(--spacing-lg);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .cta-title .highlight-text {
@@ -786,10 +794,12 @@ img {
 
 .page-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 10vw, 8rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     line-height: 0.9;
     text-transform: uppercase;
     margin-bottom: var(--spacing-md);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .page-subtitle {
@@ -929,9 +939,11 @@ img {
 
 .cs-title {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     line-height: 0.95;
     text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .cs-subtitle {
@@ -1139,9 +1151,11 @@ img {
 
 .next-title {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     transition: transform 0.3s ease;
     display: inline-block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .next-title:hover {
@@ -1342,9 +1356,11 @@ img {
 
 .about-cta h2 {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     line-height: 1;
     margin-bottom: var(--spacing-lg);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .manifesto-header {
@@ -1363,8 +1379,10 @@ img {
 
 .manifesto-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 12vw, 10rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     line-height: 0.9;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .manifesto-content {
@@ -1552,8 +1570,10 @@ img {
 
 .cta-text {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 6vw, 5rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     line-height: 1.1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     margin-bottom: var(--spacing-lg);
 }
 
