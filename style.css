@@ -26,15 +26,44 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    min-height: 100%;
+}
+
+html, body {
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 body {
     font-family: var(--font-body);
+    font-size: 1rem;
     background-color: var(--color-white);
     color: var(--color-black);
-    line-height: 1.5;
+    line-height: 1.6;
     overflow-x: hidden;
     cursor: crosshair;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a:focus,
+button:focus,
+.nav-links a:focus {
+    outline: 2px solid var(--color-accent-lime);
+    outline-offset: 3px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+.nav-links a:focus:not(:focus-visible) {
+    outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+.nav-links a:focus-visible {
+    outline: 2px solid var(--color-accent-lime);
+    outline-offset: 3px;
 }
 
 .noise-overlay {
@@ -141,8 +170,8 @@ img {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 15vw, 12rem);
-    line-height: 0.85;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 0.9;
     letter-spacing: -0.02em;
     text-transform: uppercase;
 }
@@ -489,7 +518,7 @@ img {
 
 .case-placeholder h3 {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 10vw, 8rem);
+    font-size: clamp(2.5rem, 8vw, 5rem);
     color: var(--color-accent-lime);
 }
 
@@ -618,8 +647,8 @@ img {
 
 .cta-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 12vw, 10rem);
-    line-height: 0.9;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 0.95;
     text-transform: uppercase;
     margin-bottom: var(--spacing-lg);
 }
@@ -757,8 +786,8 @@ img {
 
 .page-title {
     font-family: var(--font-display);
-    font-size: clamp(4rem, 20vw, 15rem);
-    line-height: 0.85;
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 0.9;
     text-transform: uppercase;
     margin-bottom: var(--spacing-md);
 }
@@ -900,8 +929,8 @@ img {
 
 .cs-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 12vw, 10rem);
-    line-height: 0.9;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 0.95;
     text-transform: uppercase;
 }
 
@@ -1334,8 +1363,8 @@ img {
 
 .manifesto-title {
     font-family: var(--font-display);
-    font-size: clamp(4rem, 25vw, 20rem);
-    line-height: 0.85;
+    font-size: clamp(3rem, 12vw, 10rem);
+    line-height: 0.9;
 }
 
 .manifesto-content {
@@ -1568,12 +1597,50 @@ img {
 }
 
 @media (max-width: 768px) {
+    .main-nav {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
     .nav-links {
-        display: none;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-black);
+        color: var(--color-white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-lg);
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        transform: translateX(0);
+    }
+    
+    .nav-links a {
+        font-size: 1.5rem;
+        color: var(--color-white);
     }
     
     .nav-toggle {
         display: block;
+        z-index: 1001;
+        background: transparent;
+        border: none;
+        color: inherit;
+        padding: 0.5rem;
+    }
+    
+    .nav-toggle.active {
+        position: fixed;
+        right: var(--spacing-md);
+    }
     }
     
     .manifesto-preview {
