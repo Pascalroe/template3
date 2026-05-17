@@ -57,7 +57,7 @@
         <h2 class="section-title">THE FORMULA SERIES</h2>
         
         <div class="products-grid">
-            <div class="product-card">
+            <div class="product-card" data-category="black-sun">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=600&fit=crop&q=80" alt="BLACK SUN">
                 </div>
@@ -65,9 +65,11 @@
                 <h3 class="product-name">BLACK SUN//</h3>
                 <p class="product-tagline">Absolute Zero Cognition</p>
                 <p class="product-ingredients">200mg Koffein • 500mg L-Theanin • B6 • B12 • Vitamin D3</p>
+                <div class="product-price">€24.99</div>
+                <button class="add-to-cart-btn" data-product-id="black-sun-01" data-product-name="BLACK SUN//" data-product-price="24.99" data-product-image="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400" data-product-variant="01 // PURE">ADD TO CART</button>
             </div>
             
-            <div class="product-card">
+            <div class="product-card" data-category="static-bloom">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?w=400&h=600&fit=crop&q=80" alt="STATIC BLOOM">
                 </div>
@@ -75,9 +77,11 @@
                 <h3 class="product-name">STATIC BLOOM//</h3>
                 <p class="product-tagline">Neural Cascade Initiation</p>
                 <p class="product-ingredients">150mg Koffein • 300mg Alpha GPC • 100mg Bacopa • Omega-3</p>
+                <div class="product-price">€24.99</div>
+                <button class="add-to-cart-btn" data-product-id="static-bloom-02" data-product-name="STATIC BLOOM//" data-product-price="24.99" data-product-image="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?w=400" data-product-variant="02 // PURE">ADD TO CART</button>
             </div>
             
-            <div class="product-card">
+            <div class="product-card" data-category="neon-dust">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1579547945413-497e1b99dac0?w=400&h=600&fit=crop&q=80" alt="NEON DUST">
                 </div>
@@ -85,9 +89,11 @@
                 <h3 class="product-name">NEON DUST//</h3>
                 <p class="product-tagline">Synaptic Overdrive</p>
                 <p class="product-ingredients">180mg Koffein • 200mg Taurin • Ginseng • Ginkgo Biloba</p>
+                <div class="product-price">€24.99</div>
+                <button class="add-to-cart-btn" data-product-id="neon-dust-03" data-product-name="NEON DUST//" data-product-price="24.99" data-product-image="https://images.unsplash.com/photo-1579547945413-497e1b99dac0?w=400" data-product-variant="03 // PURE">ADD TO CART</button>
             </div>
             
-            <div class="product-card">
+            <div class="product-card" data-category="zero-signal">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=400&h=600&fit=crop&q=80" alt="ZERO SIGNAL">
                 </div>
@@ -95,6 +101,8 @@
                 <h3 class="product-name">ZERO SIGNAL//</h3>
                 <p class="product-tagline">Dark State Activation</p>
                 <p class="product-ingredients">250mg Koffein • 400mg Theobromin • Lion's Mane • Vitamin B-Complex</p>
+                <div class="product-price">€24.99</div>
+                <button class="add-to-cart-btn" data-product-id="zero-signal-04" data-product-name="ZERO SIGNAL//" data-product-price="24.99" data-product-image="https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=400" data-product-variant="04 // PURE">ADD TO CART</button>
             </div>
         </div>
     </section>
@@ -216,6 +224,26 @@
             <p class="footer-copy">© 2024 VANTA//VIT. ALL RIGHTS RESERVED. NOT FDA APPROVED.</p>
         </div>
     </footer>
+
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-panel-header">
+            <h3 class="cart-panel-title">YOUR <span>CART</span></h3>
+            <button id="close-cart-btn" class="close-cart-btn">✕</button>
+        </div>
+        <div id="cart-items" class="cart-panel-items"></div>
+        <div id="empty-cart-message" class="empty-cart-message">
+            <p>Your cart is empty.</p>
+            <p>SELECT A VARIANT TO BEGIN.</p>
+        </div>
+        <div class="cart-panel-footer">
+            <div class="cart-total">
+                <span>TOTAL:</span>
+                <span id="cart-total">€0.00</span>
+            </div>
+            <button id="clear-cart-btn" class="clear-cart-btn">CLEAR CART</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

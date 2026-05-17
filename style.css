@@ -426,8 +426,55 @@ img {
 }
 
 .product-card:hover .product-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
     filter: grayscale(0%) contrast(1);
+}
+
+.product-price {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-acid-green);
+    margin: var(--spacing-sm) 0;
+    letter-spacing: 0.05em;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: transparent;
+    border: 2px solid var(--color-acid-green);
+    color: var(--color-acid-green);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: var(--spacing-sm);
+}
+
+.add-to-cart-btn:hover {
+    background: var(--color-acid-green);
+    color: var(--color-black);
+}
+
+.add-to-cart-btn.added {
+    background: var(--color-acid-green);
+    color: var(--color-black);
+}
+
+.add-to-cart-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: var(--color-gray);
+    color: var(--color-gray);
+}
+
+.add-to-cart-btn:disabled:hover {
+    background: transparent;
+    color: var(--color-gray);
 }
 
 .product-name {
