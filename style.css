@@ -162,6 +162,42 @@ img {
     padding: 0.5rem;
 }
 
+.nav-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: var(--spacing-md);
+    cursor: pointer;
+}
+
+.nav-cart svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-white);
+    transition: fill 0.3s ease;
+}
+
+.nav-cart:hover svg {
+    fill: var(--color-acid-green);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--color-acid-green);
+    color: var(--color-black);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -941,6 +977,20 @@ img {
     }
 }
 
+/* Add to Cart Button States */
+.add-to-cart.added {
+    background: var(--color-acid-green) !important;
+    color: var(--color-black) !important;
+    border-color: var(--color-acid-green) !important;
+}
+
+/* Shop Filter */
+.filter-btn.active {
+    background: var(--color-acid-green);
+    color: var(--color-black);
+    border-color: var(--color-acid-green);
+}
+
 @media (max-width: 768px) {
     .main-nav {
         padding: var(--spacing-sm);
@@ -974,6 +1024,11 @@ img {
     
     .nav-toggle {
         display: block;
+        z-index: 1001;
+    }
+    
+    .nav-cart {
+        display: flex;
         z-index: 1001;
     }
     

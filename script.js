@@ -96,4 +96,58 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.animation = 'glitch 3s infinite';
         });
     });
+    
+    // Add to Cart Button Animation (Shop - nur Show)
+    const addToCartBtns = document.querySelectorAll('.add-to-cart');
+    addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const originalText = this.textContent;
+            this.textContent = 'ADDED ✓';
+            this.classList.add('added');
+            
+            // Cart Badge Animation
+            const cartBadge = document.querySelector('.cart-badge');
+            if (cartBadge) {
+                cartBadge.style.transform = 'scale(1.3)';
+                setTimeout(() => {
+                    cartBadge.style.transform = 'scale(1)';
+                }, 200);
+            }
+            
+            setTimeout(() => {
+                this.textContent = originalText;
+                this.classList.remove('added');
+            }, 1500);
+        });
+    });
+    
+    // Shop Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.shop-product');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.dataset.filter;
+            
+            productCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
 });
