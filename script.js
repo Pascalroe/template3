@@ -2,6 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu functionality only
     initMobileMenu();
+    
+    // Hide header on scroll (Mobile)
+    initHeaderScroll();
 });
 
 function initMobileMenu() {
@@ -26,4 +29,34 @@ function initMobileMenu() {
             navToggle.textContent = 'MENU +';
         });
     });
+}
+
+function initHeaderScroll() {
+    const mainNav = document.querySelector('.main-nav');
+    if (!mainNav) return;
+    
+    let lastScroll = 0;
+    const scrollThreshold = 10;
+    
+    window.addEventListener('scroll', () => {
+        // Only on mobile (screen width < 768px)
+        if (window.innerWidth > 768) return;
+        
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            mainNav.classList.remove('nav-hidden');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
+            // Scrolling down - hide
+            mainNav.classList.add('nav-hidden');
+        } else if (currentScroll < lastScroll) {
+            // Scrolling up - show
+            mainNav.classList.remove('nav-hidden');
+        }
+        
+        lastScroll = currentScroll;
+    }, { passive: true });
 }

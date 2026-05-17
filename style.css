@@ -1687,6 +1687,14 @@ img {
         position: fixed;
         right: var(--spacing-md);
     }
+    
+    /* Header Hide on Scroll - Mobile only */
+    .main-nav.nav-hidden {
+        transform: translateY(-100%);
+    }
+    
+    .main-nav {
+        transition: transform 0.3s ease;
     }
     
     .manifesto-preview {
