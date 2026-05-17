@@ -1,124 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT — NOIR//SYSTEM</title>
-    <link rel="stylesheet" href="style.css">
+    <title>KONTAKT - VANTA//VIT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="noise-overlay"></div>
+    <div class="scanlines"></div>
     
     <nav class="main-nav">
-        <a href="index.html" class="logo">NOIR//<span class="highlight">SYSTEM</span></a>
+        <a href="index.html" class="logo">VANTA<span>//</span>VIT</a>
         <div class="nav-links">
-            <a href="work.html">WORK</a>
-            <a href="about.html">ABOUT</a>
-            <a href="manifesto.html">MANIFESTO</a>
-            <a href="contact.html" class="active">CONTACT</a>
+            <a href="index.html">HOME</a>
+            <a href="about.html">PROJEKT</a>
+            <a href="products.html">PRODUKTE</a>
+            <a href="contact.html" class="active">KONTAKT</a>
         </div>
-        <div class="nav-toggle">MENU +</div>
+        <button class="nav-toggle">MENU</button>
     </nav>
 
-    <main class="contact-page">
-        <section class="contact-hero" data-scroll>
-            <span class="page-label">REACH OUT</span>
-            <h1 class="page-title">GET IN<br><span class="highlight-text">TOUCH</span></h1>
-        </section>
+    <header class="page-header">
+        <h1 class="page-title">OPEN <span>DOSSIER</span></h1>
+        <p class="page-subtitle">// INITIIERE KONTAKTPROTOKOLL</p>
+    </header>
 
-        <section class="contact-options" data-scroll>
-            <div class="contact-method">
-                <span class="method-label">EMAIL</span>
-                <a href="mailto:hello@noir-system.com" class="method-link">hello@noir-system.com</a>
-            </div>
-            <div class="contact-method">
-                <span class="method-label">INSTAGRAM</span>
-                <a href="#" class="method-link">@noir.system</a>
-            </div>
-            <div class="contact-method">
-                <span class="method-label">TWITTER</span>
-                <a href="#" class="method-link">@noirsystem</a>
-            </div>
-        </section>
+    <section class="contact-content">
+        <div class="contact-intro" data-scroll>
+            <p>
+                Sie haben Fragen zur Formel? Sie möchten mehr über das Projekt erfahren?<br>
+                Oder sind Sie bereit, Teil der Bewegung zu werden?<br>
+                <br>
+                Füllen Sie das Formular aus. Wir melden uns. Wenn wir wollen.
+            </p>
+        </div>
 
-        <section class="contact-locations" data-scroll>
-            <h2>OUR HUBS</h2>
-            <div class="location-cards">
-                <div class="location-card">
-                    <span class="card-code">BERLIN</span>
-                    <p>Kreuzbergstraße 12<br>10999 Berlin, Germany</p>
-                </div>
-                <div class="location-card">
-                    <span class="card-code">TOKYO</span>
-                    <p>Shibuya 1-2-3<br>Shibuya, Tokyo, Japan</p>
-                </div>
-                <div class="location-card">
-                    <span class="card-code">NEW YORK</span>
-                    <p>SoHo Street 45<br>New York, NY 10012</p>
-                </div>
+        <form class="dossier-form" id="contactForm" data-scroll>
+            <h2 class="form-header">// KONTAKTANFRAGE</h2>
+            
+            <div class="form-group">
+                <label for="name">CODENAME / NAME</label>
+                <input type="text" id="name" name="name" placeholder="WER SIND SIE?" required>
             </div>
-        </section>
-
-        <section class="contact-questions" data-scroll>
-            <h2>BEFORE YOU WRITE</h2>
-            <div class="questions-list">
-                <div class="question-item">
-                    <span class="q-number">01</span>
-                    <p>Do you work with small budgets?</p>
-                    <span class="q-answer">We select projects based on potential, not just budget. If your project excites us, we'll find a way.</span>
-                </div>
-                <div class="question-item">
-                    <span class="q-number">02</span>
-                    <p>How long does a project take?</p>
-                    <span class="q-answer">Brand projects: 8-16 weeks. Digital projects: 12-24 weeks. It depends on scope and collaboration speed.</span>
-                </div>
-                <div class="question-item">
-                    <span class="q-number">03</span>
-                    <p>Do you do rush projects?</p>
-                    <span class="q-answer">Rarely. Quality takes time. But if it's urgent and compelling, let's talk.</span>
-                </div>
-                <div class="question-item">
-                    <span class="q-number">04</span>
-                    <p>What's your availability?</p>
-                    <span class="q-answer">Our next available slot is Q3 2024. Book early.</span>
-                </div>
+            
+            <div class="form-group">
+                <label for="email">KOMMUNIKATIONSADRESSE / EMAIL</label>
+                <input type="email" id="email" name="email" placeholder="IHRE@EMAIL.ADRESSE" required>
             </div>
-        </section>
+            
+            <div class="form-group">
+                <label for="subject">ANLASS DER KONTAKTAUFNAHME</label>
+                <select id="subject" name="subject" required>
+                    <option value="">AUSWÄHLEN...</option>
+                    <option value="general">ALLGEMEINE ANFRAGE</option>
+                    <option value="partnership">GESCHÄFTSPARTNERSCHAFT</option>
+                    <option value="wholesale">GROSSHANDEL / VERTRIEB</option>
+                    <option value="press">PRESSE / MEDIEN</option>
+                    <option value="research">FORSCHUNGSKOLLABORATION</option>
+                    <option value="other">SONSTIGES</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">NACHRICHT / INHALT</label>
+                <textarea id="message" name="message" placeholder="IHRE NACHRICHT AN UNS..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">ÜBERTRAGEN</button>
+            
+            <p class="form-note">
+                ⚠ IHRE DATEN WERDEN NACH INTERNATIONALLEN STANDARDS VERARBEITET.<br>
+                WIR TEILEN SIE MIT NIEMANDEM. AUSSER DEM FBI.
+            </p>
+        </form>
 
-        <section class="contact-cta" data-scroll>
-            <p class="cta-text">READY TO MAKE<br><span class="highlight-text">SOMETHING ICONIC?</span></p>
-            <a href="mailto:hello@noir-system.com" class="cta-button large">START A PROJECT</a>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="footer-top">
-            <div class="footer-logo">NOIR//<span class="highlight">SYSTEM</span></div>
-            <div class="footer-links">
-                <a href="work.html">WORK</a>
-                <a href="about.html">ABOUT</a>
-                <a href="manifesto.html">MANIFESTO</a>
-                <a href="contact.html">CONTACT</a>
+        <div class="research-notes" style="margin-top: var(--spacing-xl);" data-scroll>
+            <div class="research-note">
+                <div class="note-header">// ALTERNATIVE KONTAKTMETHODEN</div>
+                <div class="note-content">
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        <strong style="color: var(--color-white);">SIGNAL:</strong> +49 1XX XXXX XXXX<br>
+                        <span style="color: var(--color-gray);">(Wir antworten nur auf Signal. Kein WhatsApp.)</span>
+                    </p>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        <strong style="color: var(--color-white);">PGP KEY:</strong> AVALIABLE ON REQUEST<br>
+                        <span style="color: var(--color-gray);">(Für diejenigen, die es wirklich ernst meinen)</span>
+                    </p>
+                    <p>
+                        <strong style="color: var(--color-white);">POSTADRESSE:</strong><br>
+                        VANTA//VIT<br>
+                        c/o Mailbox Company<br>
+                        12345 Irgendwo<br>
+                        GERMANY
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-location">
-                <span>BERLIN</span>·<span>TOKYO</span>·<span>NYC</span>
+
+        <div class="terminal" style="margin-top: var(--spacing-xl); max-width: 600px; margin-left: auto; margin-right: auto;" data-scroll>
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">system@status:~/response-time</span>
             </div>
-            <div class="footer-social">
-                <a href="#">INSTAGRAM</a>
-                <a href="#">TWITTER</a>
-                <a href="#">LINKEDIN</a>
+            <div class="terminal-body">
+                <div class="terminal-line">
+                    <span class="prompt">$</span> <span class="command">check inboxes</span>
+                </div>
+                <div class="terminal-line" style="color: var(--color-acid-green);">
+                    > 47 unread messages in primary queue
+                </div>
+                <div class="terminal-line" style="color: var(--color-toxic-orange);">
+                    > Estimated response time: 3-7 business cycles
+                </div>
+                <div class="terminal-line" style="color: #666;">
+                    > Priority given to: partners, researchers, verified entities
+                </div>
+                <div class="terminal-line" style="color: #444;">
+                    > Casual inquiries: lower priority (no offense)
+                </div>
             </div>
-            <div class="footer-copyright">
-                © 2024 NOIR//SYSTEM. ALL RIGHTS RESERVED.
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">VANTA<span>//</span>VIT</div>
+            <div class="footer-links">
+                <a href="index.html">HOME</a>
+                <a href="about.html">PROJEKT</a>
+                <a href="products.html">PRODUKTE</a>
+                <a href="contact.html">KONTAKT</a>
             </div>
+            <p class="footer-copy">© 2024 VANTA//VIT. ALL RIGHTS RESERVED. NOT FDA APPROVED.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('ÜBERTRAGUNG ERFOLGREICH. WIR WERDEN UNS BEI IHNEN MELDEN. ODER AUCH NICHT.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>

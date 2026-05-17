@@ -1,214 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOIR//SYSTEM — Creative Studio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>VANTA//VIT - Neuro-Performance Getränk</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="noise-overlay"></div>
+    <div class="scanlines"></div>
     
     <nav class="main-nav">
-        <a href="index.html" class="logo">NOIR//<span class="highlight">SYSTEM</span></a>
+        <a href="index.html" class="logo">VANTA<span>//</span>VIT</a>
         <div class="nav-links">
-            <a href="work.html">WORK</a>
-            <a href="about.html">ABOUT</a>
-            <a href="manifesto.html">MANIFESTO</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="index.html" class="active">HOME</a>
+            <a href="about.html">PROJEKT</a>
+            <a href="products.html">PRODUKTE</a>
+            <a href="contact.html">KONTAKT</a>
         </div>
-        <div class="nav-toggle">MENU +</div>
+        <button class="nav-toggle">MENU</button>
     </nav>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="line">WE DESIGN</span>
-                    <span class="line indent">CHAOS INTO</span>
-                    <span class="line highlight-text">CLARITY</span>
-                </h1>
-                <div class="hero-subtitle">
-                    <p>— EST. 2019 — BERLIN — TOKYO — NYC —</p>
-                    <p class="marquee"><span>BRANDING /// DIGITAL /// ART DIRECTION /// MOTION ///</span></p>
-                </div>
-            </div>
-            <div class="hero-scroll-indicator">
-                <span>SCROLL</span>
-                <div class="scroll-line"></div>
-            </div>
-        </section>
-
-        <section class="manifesto-preview">
-            <div class="manifesto-label">
-                <span class="glitch" data-text="MANIFESTO">MANIFESTO</span>
-            </div>
-            <div class="manifesto-text">
-                <p>WE REJECT THE ORDINARY. WE REJECT THE SAFE CHOICE. WE REJECT THE templates THAT CROWD THE INTERNET. WE CREATE FOR THOSE WHO DARE TO BE DIFFERENT. OUR WORK IS NOT FOR EVERYONE — AND THAT'S THE POINT.</p>
-            </div>
-            <a href="manifesto.html" class="read-more">READ FULL MANIFESTO →</a>
-        </section>
-
-        <section class="selected-work">
-            <div class="section-header">
-                <h2>SELECTED WORK</h2>
-                <span class="section-number">001</span>
-            </div>
-            <div class="work-grid">
-                <article class="work-item large" data-speed="0.8">
-                    <div class="work-image">
-                        <div class="work-placeholder" style="background: linear-gradient(135deg, #B6FF2E 0%, #8CBF1A 50%, #B6FF2E 100%);">NS_01</div>
-                    </div>
-                    <div class="work-info">
-                        <h3>NOVA//STORM</h3>
-                        <p>Brand Identity + Digital</p>
-                        <span class="year">2024</span>
-                    </div>
-                </article>
-                <article class="work-item" data-speed="1.1">
-                    <div class="work-image">
-                        <div class="work-placeholder" style="background: linear-gradient(45deg, #FF2E2E 0%, #CC2525 50%, #FF2E2E 100%);">VX_02</div>
-                    </div>
-                    <div class="work-info">
-                        <h3>VOID//X</h3>
-                        <p>Art Direction</p>
-                        <span class="year">2024</span>
-                    </div>
-                </article>
-                <article class="work-item offset-top" data-speed="0.9">
-                    <div class="work-image">
-                        <div class="work-placeholder" style="background: linear-gradient(180deg, #2E6BFF 0%, #1E4FCC 50%, #2E6BFF 100%);">KR_03</div>
-                    </div>
-                    <div class="work-info">
-                        <h3>KIRA//REC</h3>
-                        <p>Web Experience</p>
-                        <span class="year">2023</span>
-                    </div>
-                </article>
-                <article class="work-item wide" data-speed="1.0">
-                    <div class="work-image">
-                        <div class="work-placeholder" style="background: linear-gradient(135deg, #000 0%, #333 50%, #000 100%); color: #B6FF2E;">PH_04</div>
-                    </div>
-                    <div class="work-info">
-                        <h3>PHANTOM//COLLECTIVE</h3>
-                        <p>Full Brand System</p>
-                        <span class="year">2023</span>
-                    </div>
-                </article>
-                <article class="work-item" data-speed="1.2">
-                    <div class="work-image">
-                        <div class="work-placeholder" style="background: repeating-linear-gradient(45deg, #000 0px, #000 10px, #fff 10px, #fff 20px);">EC_05</div>
-                    </div>
-                    <div class="work-info">
-                        <h3>ECHO//CHAMBER</h3>
-                        <p>Motion Design</p>
-                        <span class="year">2023</span>
-                    </div>
-                </article>
-            </div>
-            <a href="work.html" class="view-all">VIEW ALL PROJECTS</a>
-        </section>
-
-        <section class="philosophy">
-            <div class="philosophy-content">
-                <div class="philosophy-statement">
-                    <span class="label">PHILOSOPHY</span>
-                    <h2>WE DON'T DESIGN.<br>WE DISRUPT.</h2>
-                </div>
-                <div class="philosophy-text">
-                    <p>Every brand has a story. Most are forgettable. We craft narratives that demand attention, that refuse to be ignored, that linger in the mind like an unforgettable melody.</p>
-                    <p>Our approach is simple: deconstruct, reconstruct, transcend.</p>
-                </div>
-            </div>
-            <div class="philosophy-visual">
-                <div class="visual-element rotate"></div>
-                <div class="visual-element shift"></div>
-            </div>
-        </section>
-
-        <section class="featured-case-study">
-            <div class="case-study-split">
-                <div class="case-image">
-                    <div class="case-placeholder">
-                        <span class="case-label">FEATURED</span>
-                        <h3>NEON//DREAMS</h3>
-                    </div>
-                </div>
-                <div class="case-content">
-                    <span class="case-number">2024</span>
-                    <h3>NEON//DREAMS</h3>
-                    <p class="case-subtitle">Tokyo-based fashion label</p>
-                    <p class="case-description">A complete brand transformation for Tokyo's most innovative streetwear label. We stripped away the noise and revealed the raw energy underneath.</p>
-                    <div class="case-stats">
-                        <div class="stat">
-                            <span class="stat-number">340%</span>
-                            <span class="stat-label">Engagement ↑</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">12</span>
-                            <span class="stat-label">Markets</span>
-                        </div>
-                    </div>
-                    <a href="case-study.html" class="case-link">FULL CASE STUDY →</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="clients">
-            <div class="section-header">
-                <h2>TRUSTED BY</h2>
-                <span class="section-number">002</span>
-            </div>
-            <div class="clients-grid">
-                <div class="client-logo">SONY</div>
-                <div class="client-logo">PUMA</div>
-                <div class="client-logo">NIKE</div>
-                <div class="client-logo">ADIDAS</div>
-                <div class="client-logo">HYPER</div>
-                <div class="client-logo">WIRED</div>
-                <div class="client-logo">FUTURE</div>
-                <div class="client-logo">PULSE</div>
-            </div>
-        </section>
-
-        <section class="contact-cta">
-            <div class="cta-content">
-                <span class="cta-label">READY?</span>
-                <h2 class="cta-title">LET'S BREAK<br>SOMETHING<br><span class="highlight-text">BEAUTIFUL</span></h2>
-                <a href="contact.html" class="cta-button">GET IN TOUCH</a>
-            </div>
-            <div class="cta-decoration">
-                <div class="deco-circle"></div>
-                <div class="deco-line"></div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="footer-top">
-            <div class="footer-logo">NOIR//<span class="highlight">SYSTEM</span></div>
-            <div class="footer-links">
-                <a href="work.html">WORK</a>
-                <a href="about.html">ABOUT</a>
-                <a href="manifesto.html">MANIFESTO</a>
-                <a href="contact.html">CONTACT</a>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-headline">
+                <span class="glitch">YOUR BRAIN</span><br>
+                <span class="glitch">IS THIRSTY.</span>
+            </h1>
+            <p class="hero-subheadline">UPGRADE YOUR CHEMISTRY.</p>
+            <p class="hero-warning">⚠ NOT FDA APPROVED FOR ENLIGHTENMENT ⚠</p>
+            <p class="hero-subheadline" style="font-size: clamp(1rem, 2.5vw, 1.5rem); margin-bottom: var(--spacing-lg);">VITAMINS FOR THE END TIMES.</p>
+            <div class="hero-ctas">
+                <a href="#" class="cta-btn primary">DRINK THE SIGNAL</a>
+                <a href="products.html" class="cta-btn">ENTER THE FORMULA</a>
+                <a href="about.html" class="cta-btn">OPEN DOSSIER</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-location">
-                <span>BERLIN</span>·<span>TOKYO</span>·<span>NYC</span>
+        <div class="hero-scroll">
+            <span>SCROLL TO DECODE</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <span class="section-label">// SELECT VARIANT</span>
+        <h2 class="section-title">THE FORMULA SERIES</h2>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-code">01</div>
+                <h3 class="product-name">BLACK SUN//</h3>
+                <p class="product-tagline">Absolute Zero Cognition</p>
+                <p class="product-ingredients">200mg Koffein • 500mg L-Theanin • B6 • B12 • Vitamin D3</p>
             </div>
-            <div class="footer-social">
-                <a href="#">INSTAGRAM</a>
-                <a href="#">TWITTER</a>
-                <a href="#">LINKEDIN</a>
+            
+            <div class="product-card">
+                <div class="product-code">02</div>
+                <h3 class="product-name">STATIC BLOOM//</h3>
+                <p class="product-tagline">Neural Cascade Initiation</p>
+                <p class="product-ingredients">150mg Koffein • 300mg Alpha GPC • 100mg Bacopa • Omega-3</p>
             </div>
-            <div class="footer-copyright">
-                © 2024 NOIR//SYSTEM. ALL RIGHTS RESERVED.
+            
+            <div class="product-card">
+                <div class="product-code">03</div>
+                <h3 class="product-name">NEON DUST//</h3>
+                <p class="product-tagline">Synaptic Overdrive</p>
+                <p class="product-ingredients">180mg Koffein • 200mg Taurin • Ginseng • Ginkgo Biloba</p>
             </div>
+            
+            <div class="product-card">
+                <div class="product-code">04</div>
+                <h3 class="product-name">ZERO SIGNAL//</h3>
+                <p class="product-tagline">Dark State Activation</p>
+                <p class="product-ingredients">250mg Koffein • 400mg Theobromin • Lion's Mane • Vitamin B-Complex</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-section">
+        <div class="lore-grid">
+            <div class="lore-content">
+                <h2>THE <span>PROJECT</span></h2>
+                <p class="lore-text">
+                    <strong>1947:</strong> Die ersten Aufzeichnungen tauchen auf. Ein Projekt unter dem Decknamen "VANTAGE" wird in den geheimen Laboren der Nachkriegszeit initiiert. Die Mission: Das menschliche Bewusstsein auf eine neue Ebene heben.
+                </p>
+                <p class="lore-text">
+                    <strong>1989:</strong> Nach dem Mauerfall gelangen brisante Dokumente an die Öffentlichkeit. Die Formel war nie vollständig vernichtet worden.
+                </p>
+                <p class="lore-text">
+                    <strong>2024:</strong> VANTA//VIT erwacht. Die Formel wurde rekonstruiert, verfeinert und für die Massenproduktion vorbereitet.
+                </p>
+            </div>
+            
+            <div class="research-notes">
+                <div class="research-note">
+                    <div class="note-header">// FORSCHUNGSDATEN - KLASSE ALPHA</div>
+                    <div class="note-content">
+                        Subjekt D-47 zeigt nach 72 Stunden kontinuierlicher Einnahme eine <span class="redacted">████████</span>% Steigerung der kognitiven Leistungsfähigkeit. Neural pathways zeigen ungewöhnliche Aktivität in Region 7 des Präfrontalcortex. <span class="redacted">██████████</span>
+                    </div>
+                </div>
+                
+                <div class="research-note">
+                    <div class="note-header">// LABORNOTIZEN - DR. WONG</div>
+                    <div class="note-content">
+                        Die Kombination aus L-Theanin und Koffein erzeugt einen Zustand, den ich nur als "flüssige Klarheit" beschreiben kann. Es ist, als würde man durch Nebel直接 in die Wahrheit blicken. <span class="redacted">████████</span> muss ich verstecken.
+                    </div>
+                </div>
+                
+                <div class="research-note">
+                    <div class="note-header">// INTERNE KORRESPONDENZ</div>
+                    <div class="note-content">
+                        "Das Produkt funktioniert zu gut. Die Tester berichten von <span class="redacted">████████</span>. Wir müssen die Formel anpassen, bevor wir die Produktion starten." - Projektleitung, Juni 2024
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof-section">
+        <span class="section-label">// TERMINAL REVIEWS</span>
+        <h2 class="section-title">WAS SIE SAGEN</h2>
+        
+        <div class="terminal-reviews">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">user@neural-net:~/reviews</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span> <span class="command">cat review_7734.txt</span>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-text">
+                        "Ich habe nach dem ersten Schluck Dinge gesehen, die ich nicht erklären kann. Mein Gehirn hat noch nie so klar gearbeitet. Die Zukunft hat einen Namen und sie schmeckt nach Schwarzer Johannisbeere."
+                    </div>
+                    <div class="review-author">— ANONYM_247, BERLIN</div>
+                </div>
+            </div>
+            
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">user@neural-net:~/reviews</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span> <span class="command">cat review_9921.txt</span>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-text">
+                        "Zero Signal ist nicht nur ein Getränk. Es ist eine Waffe gegen den mentalen Verfall unserer Zeit. Ich habe in 24 Stunden mehr geschafft als sonst in einer Woche. Die Nebenwirkung? Ich schlafe nicht mehr, aber ich träume trotzdem."
+                    </div>
+                    <div class="review-author">— KONSUMENT_X9, WIEN</div>
+                </div>
+            </div>
+            
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">user@neural-net:~/reviews</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span> <span class="command">cat review_4451.txt</span>
+                    </div>
+                    <div class="review-rating">★★★★☆</div>
+                    <div class="review-text">
+                        "Static Bloom hat meine Gaming-Performance auf ein Level gehoben, das nicht mehr menschlich sein sollte. Meine Teamkollegen fragen sich, ob ich betrüge. Die Antwort ist einfach: NEIN. Ich trinke nur das richtige Zeug."
+                    </div>
+                    <div class="review-author">— NEXUS_PLAYER, MÜNCHEN</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">VANTA<span>//</span>VIT</div>
+            <div class="footer-links">
+                <a href="index.html">HOME</a>
+                <a href="about.html">PROJEKT</a>
+                <a href="products.html">PRODUKTE</a>
+                <a href="contact.html">KONTAKT</a>
+            </div>
+            <p class="footer-copy">© 2024 VANTA//VIT. ALL RIGHTS RESERVED. NOT FDA APPROVED.</p>
         </div>
     </footer>
 
