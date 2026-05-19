@@ -710,9 +710,9 @@ img {
     }
     
     .hero {
-        padding: var(--spacing-xl) var(--spacing-sm);
-        padding-top: calc(var(--spacing-xxl) + 60px + env(safe-area-inset-top, 0px));
-        padding-bottom: calc(var(--spacing-xl) + env(safe-area-inset-bottom, 0px));
+        padding: var(--spacing-lg) var(--spacing-sm);
+        padding-top: calc(var(--spacing-lg) + env(safe-area-inset-top, 0px));
+        padding-bottom: calc(var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
         min-height: 100vh;
     }
     
@@ -721,11 +721,11 @@ img {
     }
     
     .hero-headline {
-        font-size: clamp(2.5rem, 15vw, 5rem);
+        font-size: clamp(2rem, 10vw, 3rem);
     }
     
     .hero-subheadline {
-        font-size: clamp(1rem, 4vw, 1.5rem);
+        font-size: 1rem;
         margin-bottom: var(--spacing-md);
     }
     
@@ -751,11 +751,7 @@ img {
     }
     
     .hero-scroll {
-        bottom: var(--spacing-lg);
-    }
-    
-    .scroll-line {
-        height: 40px;
+        display: none;
     }
     
     /* Navigation - Verbessert für Mobile */
@@ -770,7 +766,7 @@ img {
         transform: none;
         border: none;
         z-index: auto;
-        max-width: 70%;
+        max-width: 90%;
     }
     
     .nav-links a {
@@ -795,7 +791,7 @@ img {
     
     /* Products Section Mobile */
     .products-section {
-        padding: var(--spacing-xl) var(--spacing-sm);
+        padding: var(--spacing-lg) var(--spacing-sm);
     }
     
     .section-label {
@@ -842,7 +838,7 @@ img {
     
     /* Lore Section Mobile */
     .lore-section {
-        padding: var(--spacing-xl) var(--spacing-sm);
+        padding: var(--spacing-lg) var(--spacing-sm);
     }
     
     .lore-grid {
@@ -876,7 +872,7 @@ img {
     
     /* Social Proof Mobile */
     .social-proof-section {
-        padding: var(--spacing-xl) var(--spacing-sm);
+        padding: var(--spacing-lg) var(--spacing-sm);
     }
     
     .terminal-reviews {
@@ -897,7 +893,7 @@ img {
     
     /* Footer Mobile */
     .footer {
-        padding: var(--spacing-lg) var(--spacing-sm);
+        padding: var(--spacing-md) var(--spacing-sm);
     }
     
     .footer-accordion {
