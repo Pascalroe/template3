@@ -4,9 +4,14 @@
     --color-text: #ffffff;
     --color-white: #FFFFFF;
     --color-black: #000000;
+    --color-gray: #888888;
+    --color-dark-gray: #1a1a1a;
+    --color-acid-green: #B6FF2E;
     --color-accent-lime: #B6FF2E;
     --color-accent-red: #FF2E2E;
     --color-accent-blue: #2E6BFF;
+    --color-accent-orange: #FF6B2E;
+    --color-toxic-orange: #FF6B2E;
     --color-nav-bg: #000000;
     --color-nav-border: #ffffff;
     --color-secondary: #888888;
@@ -37,9 +42,14 @@
     --color-text: #1a1a1a;
     --color-white: #FFFFFF;
     --color-black: #000000;
+    --color-gray: #888888;
+    --color-dark-gray: #e5e5e5;
+    --color-acid-green: #8CBF1A;
     --color-accent-lime: #8CBF1A;
     --color-accent-red: #E01515;
     --color-accent-blue: #1E4FCC;
+    --color-accent-orange: #E04F1E;
+    --color-toxic-orange: #E04F1E;
     --color-nav-bg: #ffffff;
     --color-nav-border: #000000;
     --color-secondary: #666666;
@@ -403,6 +413,27 @@ img {
 }
 
 /* ========== LIGHT MODE HERO FIX ========== */
+[data-theme="light"] .logo {
+    color: var(--color-black);
+    text-shadow: none;
+}
+
+[data-theme="light"] .logo span {
+    color: var(--color-accent-lime);
+}
+
+[data-theme="light"] .nav-links a {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .nav-links a::after {
+    background: var(--color-black);
+}
+
+[data-theme="light"] .nav-links a.active::after {
+    width: 100%;
+}
+
 [data-theme="light"] .hero-headline {
     color: var(--color-white);
     text-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
@@ -446,6 +477,209 @@ img {
     background: 
         radial-gradient(circle at 20% 80%, rgba(140, 191, 26, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(224, 21, 21, 0.1) 0%, transparent 50%);
+}
+
+/* ========== LIGHT MODE PRODUCTS SECTION ========== */
+[data-theme="light"] .products-section {
+    background: var(--color-bg);
+}
+
+[data-theme="light"] .section-label {
+    color: var(--color-muted);
+}
+
+[data-theme="light"] .section-title {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .product-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .product-code {
+    color: var(--color-muted);
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .product-name {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .product-tagline {
+    color: var(--color-secondary);
+}
+
+[data-theme="light"] .product-ingredients {
+    color: var(--color-muted);
+}
+
+[data-theme="light"] .product-price {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .add-to-cart-btn {
+    border-color: var(--color-black);
+    color: var(--color-black);
+}
+
+[data-theme="light"] .add-to-cart-btn:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+/* ========== LIGHT MODE LORE SECTION ========== */
+[data-theme="light"] .lore-section {
+    background: var(--color-white);
+}
+
+[data-theme="light"] .lore-content h2 {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .lore-content h2 span {
+    color: var(--color-accent-lime);
+}
+
+[data-theme="light"] .lore-text {
+    color: var(--color-text);
+}
+
+[data-theme="light"] .research-note {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .note-header {
+    color: var(--color-muted);
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="light"] .note-content {
+    color: var(--color-text);
+}
+
+[data-theme="light"] .redacted {
+    background: var(--color-black);
+    color: var(--color-black);
+}
+
+/* ========== LIGHT MODE SOCIAL PROOF ========== */
+[data-theme="light"] .social-proof-section {
+    background: var(--color-bg);
+}
+
+[data-theme="light"] .terminal {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .terminal-header {
+    background: var(--color-border-light);
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="light"] .terminal-title {
+    color: var(--color-secondary);
+}
+
+[data-theme="light"] .terminal-line {
+    color: var(--color-muted);
+}
+
+[data-theme="light"] .review-text {
+    color: var(--color-text);
+}
+
+[data-theme="light"] .review-author {
+    color: var(--color-muted);
+}
+
+/* ========== LIGHT MODE FOOTER ========== */
+[data-theme="light"] .footer {
+    background: var(--color-white);
+    border-top: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .footer-logo {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .footer-logo span {
+    color: var(--color-accent-lime);
+}
+
+[data-theme="light"] .footer-links a {
+    color: var(--color-text);
+}
+
+[data-theme="light"] .footer-links a:hover {
+    color: var(--color-accent-lime);
+}
+
+[data-theme="light"] .footer-copy {
+    color: var(--color-muted);
+}
+
+/* ========== LIGHT MODE CART ========== */
+[data-theme="light"] .cart-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .cart-panel {
+    background: var(--color-white);
+    border-left: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .cart-panel-title {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .cart-panel-title span {
+    color: var(--color-accent-lime);
+}
+
+[data-theme="light"] .close-cart-btn {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .empty-cart-message {
+    color: var(--color-muted);
+}
+
+[data-theme="light"] .cart-item {
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="light"] .cart-item-name {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .cart-item-variant {
+    color: var(--color-muted);
+}
+
+[data-theme="light"] .cart-item-price {
+    color: var(--color-text);
+}
+
+[data-theme="light"] .cart-item-remove {
+    color: var(--color-accent-red);
+}
+
+[data-theme="light"] .cart-total {
+    color: var(--color-black);
+}
+
+[data-theme="light"] .clear-cart-btn {
+    border-color: var(--color-black);
+    color: var(--color-black);
+}
+
+[data-theme="light"] .clear-cart-btn:hover {
+    background: var(--color-accent-red);
+    border-color: var(--color-accent-red);
+    color: var(--color-white);
 }
 
 /* ========== MOBILE OPTIMIZATION ========== */
