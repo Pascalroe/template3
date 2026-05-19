@@ -609,11 +609,24 @@ img {
     color: var(--color-accent-lime);
 }
 
-[data-theme="light"] .footer-links a {
+[data-theme="light"] .footer-direct-links a {
     color: var(--color-text);
 }
 
-[data-theme="light"] .footer-links a:hover {
+[data-theme="light"] .footer-direct-links a:hover {
+    color: var(--color-accent-lime);
+}
+
+[data-theme="light"] .footer-accordion-header {
+    color: var(--color-black);
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="light"] .footer-accordion-links a {
+    color: var(--color-text);
+}
+
+[data-theme="light"] .footer-accordion-links a:hover {
     color: var(--color-accent-lime);
 }
 
@@ -837,56 +850,102 @@ img {
         padding: var(--spacing-lg) var(--spacing-sm);
     }
     
+    .footer-accordion {
+        display: block;
+        margin-top: var(--spacing-md);
+    }
+    
+    .footer-accordion-item {
+        border-bottom: 1px solid var(--color-border);
+    }
+    
+    .footer-accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-sm) 0;
+        cursor: pointer;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--color-text);
+    }
+    
+    .footer-accordion-header::after {
+        content: '+';
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .footer-accordion-item.active .footer-accordion-header::after {
+        transform: rotate(45deg);
+    }
+    
+    .footer-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .footer-accordion-item.active .footer-accordion-content {
+        max-height: 300px;
+    }
+    
+    .footer-accordion-links {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        padding: var(--spacing-xs) 0 var(--spacing-md);
+    }
+    
+    .footer-accordion-links a {
+        font-size: 0.8rem;
+        color: var(--color-secondary);
+        transition: color 0.3s ease;
+    }
+    
+    .footer-accordion-links a:hover {
+        color: var(--color-accent-lime);
+    }
+    
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     .footer-logo {
         font-size: 1.3rem;
     }
     
-    .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: var(--spacing-sm);
+    .footer-direct-links {
+        display: none;
     }
     
-    .footer-links a {
-        font-size: 0.65rem;
+    /* Navigation Mobile - einfache Links im Header */
+    .nav-toggle {
+        display: none;
     }
     
-    .footer-copy {
-        font-size: 0.6rem;
-    }
-    
-    /* Navigation Mobile */
     .nav-links {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: var(--color-bg);
-        flex-direction: column;
-        padding: var(--spacing-md);
-        gap: var(--spacing-sm);
-        border-bottom: var(--nav-border);
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        z-index: 999;
-    }
-    
-    .nav-links.active {
-        transform: translateY(0);
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        padding: 0;
+        transform: none;
+        border: none;
+        z-index: auto;
     }
     
     .nav-links a {
-        font-size: 0.8rem;
-        padding: var(--spacing-sm) 0;
-    }
-    
-    .nav-toggle {
-        display: block;
+        font-size: 0.65rem;
+        padding: 0;
     }
     
     .nav-cart {
         position: absolute;
-        right: 70px;
+        right: 20px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -1294,12 +1353,19 @@ img {
     color: var(--color-acid-green);
 }
 
-.footer-links {
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-direct-links {
     display: flex;
     gap: var(--spacing-lg);
 }
 
-.footer-links a {
+.footer-direct-links a {
     font-family: var(--font-mono);
     font-size: 0.7rem;
     letter-spacing: 0.2em;
@@ -1308,8 +1374,13 @@ img {
     transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-direct-links a:hover {
     color: var(--color-acid-green);
+}
+
+/* Accordion auf Desktop ausblenden */
+.footer-accordion {
+    display: none;
 }
 
 .footer-copy {
