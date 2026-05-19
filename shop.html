@@ -77,6 +77,11 @@
             position: sticky;
             top: 60px;
             z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .filter-section.hidden {
+            transform: translateY(-100%);
         }
 
         .filter-buttons {
@@ -496,5 +501,31 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Filter section hide on scroll
+        (function() {
+            const filterSection = document.querySelector('.filter-section');
+            if (!filterSection) return;
+            
+            let lastScroll = 0;
+            const threshold = 10;
+            
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (Math.abs(currentScroll - lastScroll) < threshold) return;
+                
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    // Scrolling down - hide filter
+                    filterSection.classList.add('hidden');
+                } else {
+                    // Scrolling up - show filter
+                    filterSection.classList.remove('hidden');
+                }
+                
+                lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+            }, { passive: true });
+        })();
+    </script>
 </body>
 </html>
