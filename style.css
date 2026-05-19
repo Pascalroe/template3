@@ -825,29 +825,57 @@ img {
     .product-card {
         padding: var(--spacing-md);
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .product-image {
+        display: none;
+    }
+    
+    .product-code {
+        font-size: 0.7rem;
+        font-family: var(--font-mono);
+        color: var(--color-accent-lime);
+        letter-spacing: 0.2em;
     }
     
     .product-name {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        font-family: var(--font-display);
+        letter-spacing: 0.05em;
     }
     
     .product-tagline {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        font-family: var(--font-body);
+        color: var(--color-white);
+        opacity: 0.9;
+        margin-bottom: var(--spacing-xs);
     }
     
     .product-ingredients {
         font-size: 0.7rem;
+        font-family: var(--font-mono);
+        color: var(--color-muted);
+        line-height: 1.6;
     }
     
     .product-price {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        font-family: var(--font-display);
+        margin-top: var(--spacing-xs);
     }
     
     .add-to-cart-btn {
         width: 100%;
         padding: 14px;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+        font-family: var(--font-mono);
+        letter-spacing: 0.1em;
         min-height: 48px;
+        margin-top: var(--spacing-xs);
     }
     
     /* Lore Section Mobile */
