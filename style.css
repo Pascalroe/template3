@@ -435,33 +435,43 @@ img {
 }
 
 [data-theme="light"] .hero-headline {
-    color: var(--color-white);
-    text-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    color: var(--color-black);
+    text-shadow: none;
 }
 
 [data-theme="light"] .hero-subheadline {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text);
 }
 
 [data-theme="light"] .hero-warning {
     color: var(--color-accent-red);
 }
 
+[data-theme="light"] .hero {
+    background: var(--color-white);
+}
+
+[data-theme="light"] .hero::before {
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(140, 191, 26, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(224, 21, 21, 0.05) 0%, transparent 50%);
+}
+
 [data-theme="light"] .cta-btn {
-    border-color: var(--color-white);
-    color: var(--color-white);
+    border-color: var(--color-black);
+    color: var(--color-black);
 }
 
 [data-theme="light"] .cta-btn:hover {
     background: var(--color-accent-lime);
-    color: var(--color-black);
     border-color: var(--color-accent-lime);
+    color: var(--color-black);
 }
 
 [data-theme="light"] .cta-btn.primary {
-    background: var(--color-white);
-    color: var(--color-black);
-    border-color: var(--color-white);
+    background: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-black);
 }
 
 [data-theme="light"] .cta-btn.primary:hover {
@@ -470,13 +480,7 @@ img {
 }
 
 [data-theme="light"] .hero-scroll {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-[data-theme="light"] .hero::before {
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(140, 191, 26, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(224, 21, 21, 0.1) 0%, transparent 50%);
+    color: var(--color-muted);
 }
 
 /* ========== LIGHT MODE PRODUCTS SECTION ========== */
